@@ -26,13 +26,6 @@ class UserPersona(models.Model):
         help_text=_("Indicates whether the user persona is active."),
         db_comment="Indicates whether the user persona is active."
     )
-    image = models.ImageField(
-        upload_to='persona_images/',
-        blank=True,
-        null=True,
-        help_text=_("An image representing the user persona."),
-        db_comment="Stores an image representing the user persona."
-    )
     created_at = models.DateTimeField(
         auto_now_add=True,
         help_text=_("The date and time when the user persona was created."),
