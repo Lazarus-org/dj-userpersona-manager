@@ -17,9 +17,7 @@ class DefaultAdminSettings:
 class DefaultThrottleSettings:
     authenticated_user_throttle_rate: str = "30/minute"
     staff_user_throttle_rate: str = "100/minute"
-    throttle_class: str = (
-        "persona_manager.api.throttlings.RoleBasedUserRateThrottle"
-    )
+    throttle_class: str = "persona_manager.api.throttlings.RoleBasedUserRateThrottle"
 
 
 @dataclass(frozen=True)

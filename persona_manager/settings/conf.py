@@ -5,14 +5,15 @@ from django.utils.module_loading import import_string
 
 from persona_manager.constants.default_settings import (
     admin_settings,
-    image_settings,
-    throttle_settings,
-    pagination_and_filter_settings,
     api_settings,
+    image_settings,
+    pagination_and_filter_settings,
+    throttle_settings,
 )
-from persona_manager.constants.types import OptionalPaths, DefaultPath
+from persona_manager.constants.types import DefaultPath, OptionalPaths
 
 
+# pylint: disable=too-many-instance-attributes
 class PersonaManagerConfig:
     """A configuration handler.
 
