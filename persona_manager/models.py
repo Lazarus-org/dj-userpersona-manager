@@ -1,22 +1,24 @@
 from django.db.models import (
-    Model,
-    ImageField,
-    CharField,
-    TextField,
     BooleanField,
+    CharField,
     DateTimeField,
+    ImageField,
     JSONField,
+    Model,
+    TextField,
 )
-from django.conf import settings
 from django.utils.translation import gettext_lazy as _
+
+from persona_manager.settings.conf import config
 
 
 class UserPersona(Model):
     image = ImageField(
         verbose_name=_("Image"),
-        upload_to="persona_images/",
+        upload_to=config.image_upload_path,
         help_text=_("An image representing the user persona."),
         db_comment="Stores an image representing the user persona.",
+        validators=config.image_validators or [],
         blank=True,
         null=True,
     )
