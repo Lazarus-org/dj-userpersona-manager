@@ -1,9 +1,8 @@
-from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from persona_manager.api.views.userpersona import UserPersonaListViewSet
 
-# Create a router and register the viewset
+from persona_manager.api.views.userpersona import UserPersonaViewSet
+
 router = DefaultRouter()
-router.register(r'user-personas', UserPersonaListViewSet, basename='userpersona')
+router.register("userpersona", UserPersonaViewSet, basename="user-persona")
 
 urlpatterns = router.urls
