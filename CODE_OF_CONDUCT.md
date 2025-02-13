@@ -184,4 +184,4 @@ perf(parser): enhance parsing speed
 - Added benchmarks to track performance improvements
 ```
 
-Thank you for contributing to `api-response-shaper`! We look forward to your contributions.
+Thank you for contributing to `dj-userpersona-manager`! We look forward to your contributions.
