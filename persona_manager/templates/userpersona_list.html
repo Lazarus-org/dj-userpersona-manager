@@ -106,6 +106,20 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4 display-4 fw-bold text-white animate__animated animate__fadeInDown floating-heading">User Personas</h1>
+        <!-- Filter Form -->
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <form method="get" action="" class="d-flex">
+                    <select name="is_active" class="form-select me-2">
+                        <option value="">All</option>
+                        <option value="true" {% if request.GET.is_active == "true" %}selected{% endif %}>Active</option>
+                        <option value="false" {% if request.GET.is_active == "false" %}selected{% endif %}>Inactive</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </form>
+            </div>
+        </div>
+
         <div class="row">
             {% for persona in personas %}
             <div class="col-md-4 mb-4">
