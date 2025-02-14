@@ -28,9 +28,9 @@ class UserPersonaAdmin(admin.ModelAdmin):
     def activate_personas(self, request, queryset):
         queryset.update(is_active=True)
 
-    activate_personas.short_description = "Activate selected personas"
+    activate_personas.short_description = _("Activate selected personas")
 
     def deactivate_personas(self, request, queryset):
         queryset.update(is_active=False)
 
-    deactivate_personas.short_description = "Deactivate selected personas"
+    deactivate_personas.short_description = _("Deactivate selected personas")
